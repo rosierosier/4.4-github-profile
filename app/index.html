@@ -9,36 +9,60 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <section class="row search-bar">
-          <div class="top">
-            <div class="main-search">
-              <a href="#" class="etsy"><span class="mega-octicon octicon-mark-github"></span></a>
-              <div class="search-bar">
-                <form id="new-search" action="http://www.github.com" method="get">
-                  <input id="search-bar" type="text" value="Search Github" size="21"></input>
-                </form>
-              </div><!--search-bar-->
-              <a href="#" class="top-links">Pull requests</a>
-              <a href="#" class="top-links">Issues</a>
-              <a href="#" class="top-links">Gist</a>
-            </div>
-            <div class="new-options">
-              <div id="plus">
-              </div>
-              <div id="profile">
-                <img src="#"/>
-              </div>
-            </div><!--new-options-->
+      <section class="row search-bar">
+        <div class="top">
+          <div class="main-search">
+            <a href="#" class="etsy"><span class="mega-octicon octicon-mark-github"></span></a>
+            <div class="search-bar">
+              <form id="new-search" action="http://www.github.com" method="get">
+                <input id="search-bar" type="text" value="Search Github" size="21"></input>
+              </form>
+            </div><!--search-bar-->
+            <a href="#" class="top-links">Pull requests</a>
+            <a href="#" class="top-links">Issues</a>
+            <a href="#" class="top-links">Gist</a>
           </div>
-        </section>
+          <div class="new-options">
+            <div id="plus">
+            </div>
+            <div id="profile">
+              <img src="#"/>
+            </div>
+          </div><!--new-options-->
+        </div>
+      </section>
+      <section class="col-md-3">
+        <div class="profile-pic">
+          <img src="#"/>
+          <h1>Full Name</h1>
+          <h2>Username</h2>
+          <p>Joined date</p>
+          <h3>Organizations</h3>
+        </div><!--profile-pic column-->
+      </section>
+      <section class="col-md-9">
+        <ul class="js-repository-tab">
+          <li>Repo Name</li>
+        </ul>
+      </section>
 
 
 
-
-
-
-
+        <script id="repo-template" type="text/x-handlebars-template">
+          <ul class="js-respository-tab">
+            <li class="repo-name">{{<!--repository name-->}}
+            </li>
+            <li class="time-updated">{{<!--updated time-->}}
+            </li>
+            <!-- <img src= {{image}} />
+            <div class="description">
+              <p>{{title}}</p>
+              <p id="manufacturer">{{manufacturer}}</p>
+              <p id="price">${{price}}</p>
+              <p id="currency">{{currencyCode}}</p>
+            </div> -->
+          </ul>
+        </script>
 
 
 

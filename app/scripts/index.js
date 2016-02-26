@@ -33,14 +33,15 @@ function fetchGithub(){
   var githubUrl = 'https://api.github.com/users/rosierosier';
   var githubUrlRepo = githubUrl + '/repos';
 
-  $.ajax(githubUrl).done(function(userName){
-    userName.results.forEach(function(user){
-      $('.js-github-user').append('<p>' + user.name + '</p>');
+  $.ajax(githubUrl).done(function(getRepo){
+    getRepo.results.forEach(function(user){
+      //this line is correct except for the user.name section
+      $('.js-respository-tab').append('<li>' + user.name + '</li>');
     });
   });
 
   $.ajax(githubUrlRepo).done(function(){
-    
+    //
   })
 }
 

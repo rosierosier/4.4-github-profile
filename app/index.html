@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="container">
-      <section class="row search-bar">
+      <section class="row search">
         <div class="top">
           <div class="main-search">
-            <a href="#" class="etsy"><span class="mega-octicon octicon-mark-github"></span></a>
+            <a href="#" class="octicon"><img src="./images/GitHub-Mark-32px.png"/></a>
             <div class="search-bar">
               <form id="new-search" action="http://www.github.com" method="get">
                 <input id="search-bar" type="text" value="Search Github" size="21"></input>
@@ -24,6 +24,7 @@
           </div>
           <div class="new-options">
             <div id="plus">
+              <h1>+</h2>
             </div>
             <div id="profile">
               <img src="#"/>
@@ -31,28 +32,63 @@
           </div><!--new-options-->
         </div>
       </section>
-      <section class="col-md-3">
-        <div class="profile-pic">
-          <img src="#"/>
-          <h1>Full Name</h1>
-          <h2>Username</h2>
-          <p>Joined date</p>
-          <h3>Organizations</h3>
-        </div><!--profile-pic column-->
-      </section>
-      <section class="col-md-9">
-        <ul class="js-repository-tab">
-          <li>Repo Name</li>
-        </ul>
+      <section class="row body">
+        <section class="col-md-12">
+          <section class="col-md-3">
+            <div class="profile-pic">
+              <img src="#"/>
+              <h1>Rosemaria Rosier</h1>
+              <h2>rosierosier</h2>
+              <p>Joined on <span>January 18, 2016<span></p>
+              <h3>Organizations</h3>
+            </div><!--profile-pic column-->
+          </section>
+          <section class="col-md-8">
+            <div class="tabs">
+              <div class="contributions-tab">
+                <p>Contributions</p>
+              </div><!--contributions-->
+              <div class="repositories-tab">
+                <p>Repositories</p>
+              </div><!--repositories-->
+              <div class="public-activity-tab">
+                <p>Public activity</p>
+              </div><!--public activity-->
+              <div class="edit-profile-button">
+                <button>Edit profile</button>
+              </div><!--edit profile button-->
+            </div>
+            <div class="search-within-tab">
+              <form id="search-repos" action="http://www.github.com" method="get">
+                <input id="repo-search-bar" type="text" value="Find a repository" size="21"></input>
+              </form>
+              <button>Search</button>
+              <div class="links-within-tab">
+                <a href="#">All</a>
+                <a href="#">Public</a>
+                <a href="#">Private</a>
+                <a href="#">Sources</a>
+                <a href="#">Forks</a>
+                <a href="#">Mirrors</a>
+                <button>New</button>
+              </div><!--links within tab-->
+            </div><!--search-within-tab-->
+            <div class="repository-list">
+              <ul class="js-repository-tab">
+                <li class="js-repo-name">4.4-github-profile</li>
+                <li class="js-time-updated">Updated Time</li>
+              </ul>
+            </div><!--repository-list-->
+          </section>
       </section>
 
 
 
         <script id="repo-template" type="text/x-handlebars-template">
           <ul class="js-respository-tab">
-            <li class="repo-name">{{<!--repository name-->}}
+            <li class="js-repo-name">{{<!--repository name-->}}
             </li>
-            <li class="time-updated">{{<!--updated time-->}}
+            <li class="js-time-updated">{{<!--updated time-->}}
             </li>
             <!-- <img src= {{image}} />
             <div class="description">

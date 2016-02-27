@@ -36,7 +36,7 @@
         <section class="col-md-12">
           <section class="col-md-3">
             <div class="profile-pic">
-              <img src="#"/>
+              <!-- <img src="#"/> -->
               <h1>Rosemaria Rosier</h1>
               <h2>rosierosier</h2>
               <p>Joined on <span>January 18, 2016<span></p>
@@ -84,21 +84,31 @@
 
 
 
-        <script id="repo-template" type="text/x-handlebars-template">
-          <ul class="js-respository-tab">
-            <li class="js-repo-name">{{<!--repository name-->}}
-            </li>
-            <li class="js-time-updated">{{<!--updated time-->}}
-            </li>
-            <!-- <img src= {{image}} />
-            <div class="description">
-              <p>{{title}}</p>
-              <p id="manufacturer">{{manufacturer}}</p>
-              <p id="price">${{price}}</p>
-              <p id="currency">{{currencyCode}}</p>
-            </div> -->
-          </ul>
-        </script>
+    <script id="user-template" type="text/x-handlebars-template">
+      <div class="profile-pic">
+        <img src={{avatarUrl}}/>
+        <h1>{{name}}</h1>
+        <h2>{{username}}</h2>
+        <p>Joined on <span>January 18, 2016<span></p>
+      </div>
+    </script>
+
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      <ul class="js-respository-tab">
+        <li class="js-repo-name">{{<!--repository name-->}}
+        </li>
+        <li class="js-time-updated">{{<!--updated time-->}}
+        </li>
+        <!-- <img src= {{image}} />
+        <div class="description">
+          <p>{{title}}</p>
+          <p id="manufacturer">{{manufacturer}}</p>
+          <p id="price">${{price}}</p>
+          <p id="currency">{{currencyCode}}</p>
+        </div> -->
+      </ul>
+    </script>
 
 
 

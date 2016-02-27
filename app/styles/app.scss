@@ -121,6 +121,73 @@ img {
   margin: 15px 0;
 }
 
+.tabs {
+  border-bottom: 1px solid #eee;
+}
+
+.tabs,
+.contributions-tab,
+.repositories-tab,
+.public-activity-tab {
+  display: inline-block;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+}
+
+.repositories-tab {
+  border: 1px solid #eee;
+  border-bottom: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.edit-profile-button {
+  display: inline-block;
+  margin-left: 255px;
+}
+
+
+.search-within-tab {
+  display: inline-block;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-repos {
+  display: inline-block;
+}
+
+#search-repos {
+  display: inline-block;
+}
+
+#repo-search-bar {
+  display: inline-block;
+}
+
+.search-within-tab button {
+  display: inline-block;
+}
+
+.links-within-tab {
+  display: inline-block;
+  margin-left: 125px;
+}
+
+.links-within-tab a {
+  margin-right: 10px;
+}
+
+.links-within-tab button {
+  background-color: #60b044;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
 .repository-list{
   padding: 30px 0;
   border-bottom: 1px solid #eee;

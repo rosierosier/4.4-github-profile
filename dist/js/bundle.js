@@ -161,7 +161,7 @@ fetchGibhubRepos();
 
 },{"./token.js":2,"Handlebars":32,"jquery":45,"moment":46,"underscore":49}],2:[function(require,module,exports){
 "use strict";
-module.exports = {'token': '1b0d1cf8ef07187809104bb4c592eadccf739eca'};
+module.exports = {'token': 'abe7bff02d85def84a079a0cba8c57eff55d80bf'};
 
 },{}],3:[function(require,module,exports){
 'use strict';

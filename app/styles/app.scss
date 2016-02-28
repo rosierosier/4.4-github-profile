@@ -111,9 +111,20 @@ img {
 
 .profile-pic p {
   font-size: 14px;
+}
+
+#top-border {
   border-top: 1px solid #e5e5e5;
+  padding-top: 12px;
+}
+
+#email {
+  color: #4078c0;
+}
+
+#bottom-border {
   border-bottom: 1px solid #e5e5e5;
-  padding: 12px 0;
+  padding-bottom: 12px;
 }
 
 .profile-pic h3 {
@@ -203,6 +214,7 @@ img {
   list-style: none;
   color: #4078c0;
   font-weight: bold;
+  padding-top: 20px;
 }
 
 .js-time-updated {
@@ -211,4 +223,6 @@ img {
   margin-top: 8px;
   margin-bottom: 0;
   list-style: none;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
 }

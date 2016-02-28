@@ -2,6 +2,9 @@ var $ = require('jquery');
 var handlebars = require('Handlebars');
 var githubtoken = require('./token.js').token;
 var _ = require('underscore');
+var moment = require('moment');
+// moment().format();
+
 
 if(typeof(githubtoken) !== "undefined"){
   $.ajaxSetup({
@@ -10,6 +13,8 @@ if(typeof(githubtoken) !== "undefined"){
     }
   });
 }
+
+
 
 // var url = 'https://github.com/rosierosier?tab=repositories';
 // function fetchJSONP(url, callback){
@@ -44,12 +49,13 @@ if(typeof(githubtoken) !== "undefined"){
 var baseUrl = 'https://api.github.com/users/rosierosier';
 var githubUrlRepo = baseUrl + '/repos';
 
-var source = $("#user-template").html();
-var template = handlebars.compile(source);
+var userTemplateHtml = $("#user-template").html();
+var compiledUserTemplate = handlebars.compile(userTemplateHtml);
 
-function fetchGithub(){
+
+function fetchGithubUserData(){
   $.ajax(baseUrl).done(function(data){
-    // console.log(data);
+    console.log('this is rosierosier data', data);
     var userData = {
       name: data.name,
       username: data.login,
@@ -58,8 +64,11 @@ function fetchGithub(){
       email: data.email,
       avatarUrl: data.avatar_url,
       htmlUrl: data.html_url,
+      organizations: data.organizations_url,
     }
-    console.log(userData);
+    $('.profile-pic').append(compiledUserTemplate(userData));
+
+    console.log('this is user data', userData);
 
     // getInfo.forEach(function(value, index, array){
     //   console.log('working');
@@ -69,7 +78,26 @@ function fetchGithub(){
   });
 }
 
-fetchGithub();
+fetchGithubUserData();
+
+var repoTemplateHtml = $("#repo-template").html();
+var compiledRepoTemplate = handlebars.compile(repoTemplateHtml);
+
+function fetchRepos(){
+  $.ajax(githubUrlRepo).done(function(data){
+    console.log('this is repo data', data);
+    // console.log(data[0].updated_at);
+    // console.log(moment(data.updated_at).fromNow());
+    var updatedDate = data.updated_at;
+    var lastUpdated = moment(updatedDate).fromNow();
+    console.log(lastUpdated);
+    // var updatedDate = (moment(data.updated_at).fromNow());
+    // console.log(context);
+    $('.repository-list').append(compiledRepoTemplate(data));
+    // $('.repository-list').append(compiledRepoTemplate(lastUpdated));
+  });
+}
+fetchRepos();
 
 // function logData(data){
 //   var etsyImages = data.results;

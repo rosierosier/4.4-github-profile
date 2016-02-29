@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var handlebars = require('Handlebars');
-var githubtoken = require('./token.js').token;
+var githubtoken; //= require('./token.js').token;
 var _ = require('underscore');
 var moment = require('moment');
 // moment().format();
